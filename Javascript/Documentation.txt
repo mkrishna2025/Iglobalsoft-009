@@ -172,3 +172,127 @@ var div = function(x, y){
 	return z;
 }
 var result = div(10, 2);
+
+// Day 1 - End
+
+// Day 2 - Start
+Object - Key value pair
+	key - string, number
+	value - number, boolean, string, object(nested), function
+
+var karthik = {
+	name: 'Karthik',
+	age: 20,
+	isMale: true
+}
+
+// accessing key value pair
+alert(karthik.name);
+alert(karthik['age']);
+
+// adding key
+karthik.city = 'Hyd';
+karthik['address'] = 'kukatpally';
+
+// overiding value
+karthik.age = 30;
+
+// delete 
+delete karthik.address;
+
+karthik.address = {
+	line1: '1/2/3',
+	line2: 'Kukatpally'
+}
+
+// print kukatpally
+karthik.address.line2
+karthik.address['line2']
+karthik['address']['line2']
+karthik['address'].line2
+
+// Use cases
+1. grouping the functions
+var calculator = {
+	add: function(x,y) {
+		return x + y;
+	}
+}
+
+var scientificCalculator = {
+	add: function(x,y) {
+		return x + y;
+	}
+}
+
+calculator.sub = function(x, y){
+	return x - y;
+}
+
+function welcome(name, age, city){
+	name = name || '';
+	age = age || '';
+	city = city || '';
+	console.log('Welcome to Demo ' + name + age + city )
+}
+
+function welcome2(options){
+	console.log('Welcome to Demo ' + options.name + options.age + options.city )
+}
+welcome2({ name: 'karthik', age: 20, city:'Hyd'})
+welcome2({ city:'Hyd'})
+
+// handle undefined
+function welcome3(options){
+	options.name = options.name || '';
+	options.age = options.age || '';
+	options.city = options.city || '';
+	console.log('Welcome to Demo ' + options.name + options.age + options.city )
+}
+welcome3({ city:'Hyd'})
+
+// set default Values
+function welcome4(options){
+	options = options || {};
+	options.name = options.name || 'Guest';
+	options.age = options.age || '0';
+	options.city = options.city || 'Delhi';
+	console.log('Welcome to Demo ' + options.name + options.age + options.city )
+}
+welcome4()
+
+JSON.stringify converts object to string 
+var response = JSON.stringify(karthik)
+
+JSON.parse converts string to object
+var obj = JSON.parse(response)
+
+var obj2 = { 1: 'a', 2: 'b'}
+
+obj2.1 throws exception as key of type number cant be accessed using .
+obj2['1'] returns a
+
+// Can use _ symbol for string key
+var neha = {
+	first_name: 'Neha',
+	last_name: 'Singh'
+}
+
+
+Note: need to show collision of methods in html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
