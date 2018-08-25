@@ -277,6 +277,86 @@ var neha = {
 	first_name: 'Neha',
 	last_name: 'Singh'
 }
+// Day 2 - End
+
+// Day 3 - Start
+
+Array
+	Collection 
+	Its an Object, where keys are numeric, starts with 0, increments by 1. usually we can key as index.
+	
+var numbers = [1, 2, 3, 4, 5];
+
+// Accessing values
+numbers[0] returns 1
+numbers[1] => 2
+numbers[2] => 3
+numbers[3] => 4
+numbers[4] => 5
+numbers[5] => undefined. it doesnt throws exception
+
+var students = ['Neha', 'Prakash', 'Veena']
+
+// Iterating Arrays
+// Approach 1 - For
+for(var index = 0; index < students.length; index ++){
+	console.log(index);
+	var student = students[index];
+	console.log(student)
+}
+
+// Approach 2 - For In - Iterating by Index
+for(var index in students){
+	console.log(index);
+	var student = students[index];
+	console.log(student)
+}
+
+// Approach 3 - For of - Iterating by item
+for(var student of students){
+	console.log(student)
+}
+
+// Adding item to array
+students.push('Deepak')
+
+// deleting item from array
+students.pop() => removes last element or recently added element
+
+var persons = [
+	{ name: 'Vishnu', age: 20, city: 'Hyderabad' },
+	{ name: 'Deepa', age: 30, city: 'Hyderabad' },
+	{ name: 'Manish', age: 25, city: 'Delhi' },
+	{ name: 'Preethi', city: 'Vizag' }
+]
+
+// printing persons
+for(var item of persons){
+	console.log('Welcome to Demo, ' + item.name + ',' + item.age + ',' + item.city);
+}
+
+// printing persons from Hyderabad
+for(var item of persons){
+	if(item.city == 'Hyderabad')
+	console.log('Welcome to Demo, ' + item.name + ',' + item.age + ',' + item.city);
+}
+
+// printing persons from Hyderabad and age is 20
+for(var item of persons){
+	if(item.city == 'Hyderabad' && item.age == 20)
+	console.log('Welcome to Demo, ' + item.name + ',' + item.age + ',' + item.city);
+}
+
+// Array having elements of different types
+var array = [ 'Neha', 20, false, undefined, function() { console.log('Welcome')} ];
+
+array[0] => Neha
+array[4] => function
+array[4]() => Welcome
+
+
+
+
 
 
 Note: need to show collision of methods in html
