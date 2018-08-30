@@ -1,0 +1,88 @@
+this
+	Context/Scope
+	
+	Inside Object, this refers to Object
+var neha = {
+	name: 'Neha',
+	getName: function() {
+    	return this.name
+	}
+}
+
+Class - Structure
+
+
+// Simple Class
+class Calculator {
+	add(x, y) {
+    	return x + y;
+	}
+}
+var c1 = new Calculator();
+c1.add(1, 2);
+
+Constructor => passing default values at the time of initializaiton
+class Person {
+	constructor(name, age){
+		this.name = name;
+		this.age = 20;
+	}
+	welcome() {
+		console.log('Welcome to Demo, '+ this.name + ', ' + this.age);
+	}
+}
+
+class Person2 {
+	constructor(props){
+		this.name = props.name || '';
+		this.age = props.age || '';
+	}
+	welcome() {
+		console.log('Welcome to Demo, '+ this.name + ', ' + this.age);
+	}
+}
+var neha = new Person2({ age: 20, name: 'Neha' });
+neha.welcome() prints Welcome to Demo, Neha, 20
+
+// Inheritance
+class Father {
+	getName() {
+		return "Venkat";
+	}
+	getGender() {
+		return "M";
+	}
+}
+
+class Son extends Father {
+	getName() {
+		return "Prakash";
+	}
+	getCity(){
+		return "Hyderabad";
+	}
+}
+var s = new Son()
+console.log('Welcome to Demo, ' + s.getName() + ', ' + s.getGender() + ', ' + s.getCity())
+Welcome to Demo, Prakash, M, Hyderabad
+
+
+class Account {
+	getAccountDetails() {
+	}
+}
+class CurrentAccount extends Account{
+	
+}
+
+class SavingsAccount extends Account{
+}
+
+const pi = 3.14
+pi = 4 throws exception
+
+Create Student class. write 2 methods. getName, setName
+
+
+
+
