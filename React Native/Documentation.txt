@@ -1,0 +1,24 @@
+
+Routing => Navigation between screens
+
+Module => react-navigation
+
+react-native-navigation
+	StackNavigator
+	TabNavigator
+	
+StackNavigator
+	var routes = {
+		Login: {
+			screen: LoginScreen
+		},
+		Home: {
+			screen: HomeScreen
+		}
+	}
+	
+	var routeOptions = {
+		initialRouteName: 'NB'
+	}
+	
+	const NavigationInstance = StackNavigator(routes, routeOptions);
