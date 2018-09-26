@@ -22,3 +22,10 @@ StackNavigator
 	}
 	
 	const NavigationInstance = StackNavigator(routes, routeOptions);
+	
+By Default all components that are configured to StackNavigator will receive navigation object as in input. In this we need to use helper method navigate to change the screen.
+	this.props.navigation.navigate(route, params?)
+	
+	this.props.navigation.navigate('Home')
+	
+	this.props.navigation.navigate('Home', { userName: 'Karthik'})

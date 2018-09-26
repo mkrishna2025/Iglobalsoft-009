@@ -1,0 +1,32 @@
+React
+
+Boiler Plate => Common Code
+
+Boiler Plate Script => Used to generate Boiler Plate(Default Code)
+npm install -g create-react-app
+
+Generating Project
+create-react-app training
+
+Starting the Project
+npm run start 
+yarn start
+
+
+
+
+registerServiceWorker => Cache Resources in Browser
+
+Routing => react-router-dom
+
+npm install react-router-dom --save
+yarn add react-router-dom
+
+To Support Routing Make Our App component as child to BrowserRouter
+
+
+
+
+
+Pending Items
+Eject
