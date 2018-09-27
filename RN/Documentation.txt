@@ -1,0 +1,4 @@
+npm install -g create-react-native-app
+
+Creating
+create-react-native-app training
