@@ -24,6 +24,36 @@ yarn add react-router-dom
 
 To Support Routing Make Our App component as child to BrowserRouter
 
+Project Structure
+	public 
+		index.html
+	src(js/css)
+		containers/views
+		components
+		images
+		constants
+		
+Alt + Shift + F - formating in VS Code
+
+state level variables 
+updating state is done by using setState method
+
+constructor(props){
+	super(props);
+	this.state = {
+		a: 1,
+		b: 2,
+		c: 3
+	}
+}
+
+this.setState({ b: 4 }) => b value changed from 2 to 4 so screen updates automatically
+this.setState({ b: 2 }) => b value not changed => no updates in screen
+
+
+
+
+
 
 
 

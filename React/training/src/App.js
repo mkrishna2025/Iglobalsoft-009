@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import LoginScreen from './containers/login/';
+import HomeScreen from './containers/home/';
+
 import { Route, Switch } from 'react-router-dom';
 
 class D1 extends Component {
@@ -119,12 +122,8 @@ class App5 extends Component{
   }
 }
 
-class Login extends Component {
-  render() { return (<div> Welcome to Login</div> ) }
-}
-class Home extends Component {
-  render() { return (<div> Welcome to Home</div> ) }
-}
+
+
 class UnImplemented extends Component {
   render() { return (<div> Need to Implement </div> ) }
 }
@@ -133,8 +132,8 @@ class App6 extends Component{
   render(){
     return (
       <Switch>
-        <Route path="/" exact component={Login} />
-        <Route path="/home" component={Home} />
+        <Route path="/" exact component={LoginScreen} />
+        <Route path="/home" component={HomeScreen} />
         <Route path="/*" component={UnImplemented} />
       </Switch>
     );
