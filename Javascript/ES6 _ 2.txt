@@ -1,0 +1,67 @@
+Clone - Object
+var obj = {
+	fn: 'Arjun',
+	ln: 'Kumar',
+	age: 30
+}
+
+// Before ES6
+var obj2 = {}
+
+for(var key in obj){
+	obj2[key] = obj[key];
+}
+
+// ES6
+var obj3 = { ...obj }
+
+// adding more key values
+var obj4 = { ...obj, age: 25, city: 'Hyderabad', address: 'Ameerpet' }
+
+
+Clone - Objects
+var obj1 = { a: 1, b: 2, c: 3}
+var obj2 = { c: 4, d: 5 }
+var obj3 = { e: 9 }
+
+var obj4 = { ...obj1, ...obj2, ...obj3 }
+
+var obj4 = { ...obj1, ...obj2, ...obj3, c: 10 }
+
+Clone - Array
+var students = [ 'Neha', 'Prakash']
+
+var students2 = [];
+for(var student of students){
+	students2.push(student);
+}
+
+var students3 = [ ...students ]
+
+var a1 = [1, 2, 3];
+var a2 = [4, 5, 6];
+
+var a = [ ...a1, ...a2];
+var b = [ ...a1, ...a2, 7, 8, 9];
+
+// ignoring keys
+var obj = { a: 1, b: 2, c: 3, d: 4, e: 5 }
+
+// ignore c and e
+
+var { c, e, ...a3 } = obj;
+
+var { c: x, e: y, ...a3 } = obj;
+
+var user = {
+	fn: 'Karthik',
+	ln: 'Kumar',
+	age: 30,
+	city: 'HYD'
+}
+
+var { age, city: City } = user;
+
+
+
+
