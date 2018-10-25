@@ -51,6 +51,25 @@ this.setState({ b: 4 }) => b value changed from 2 to 4 so screen updates automat
 this.setState({ b: 2 }) => b value not changed => no updates in screen
 
 
+Project Structure
+	public
+		index.html
+		css
+		images
+	src 
+		Containers/Views
+			Page1 - Folder
+						index.js
+						Page1.css
+		Components
+		Images
+		Data
+		Styles
+	
+1. Add Routing
+2. Create Folders
+3. Place Images and Styles in public folder
+
 
 
 
