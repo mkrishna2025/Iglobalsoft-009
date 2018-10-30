@@ -210,5 +210,80 @@ class Login5 extends Component {
     }
 }
 
+// Validations
+class Login6 extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            statesClone: STATES,
+            firstname: '',
+            lastname: '',
+            errorFirstName: '',
+            errorLastName: ''
+        }
+    }
+    onCountryChange(event){
+        var country = event.target.value;
+        var filteredStates = [];
+        for(var state of STATES){
+            if(state.country == country){
+                filteredStates.push(state);
+            }
+        }
+        this.setState({ statesClone: filteredStates });
+    }
+    onLogin(){
 
-export default Login5;
+        var isValid = true;
+
+        var errorFirstName = '';
+        var errorLastName = '';
+
+        if(this.state.firstname == ''){
+            errorFirstName = 'Please Enter First Name';
+            isValid = false;
+        }
+
+        if(this.state.lastname == ''){
+            errorLastName = 'Please Enter Last Name';
+            isValid = false;
+        }
+
+        this.setState({
+            errorFirstName: errorFirstName,
+            errorLastName: errorLastName
+        });
+
+        if(isValid){
+            alert('Validated');
+        }
+    }
+    render() {
+        return (
+            <div>
+                <label>First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name.." onChange={event => this.state.firstname = event.target.value} />
+                <span class="warning">{this.state.errorFirstName}</span>
+                <br/>
+                <label>Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name.." onChange={event => this.state.lastname = event.target.value} />
+                <span class="warning">{this.state.errorLastName}</span>
+                <br/>
+                <label>Country</label>
+                <select id="country" name="country" onChange={this.onCountryChange.bind(this)}>
+                    <option value="0">Select Country</option>
+                    {COUNTRIES.map(country => <option value={country.value}>{country.display}</option>)}
+                </select>
+
+                <label>State</label>
+                <select id="state" name="state">
+                    <option value="0">Select State</option>
+                    {this.state.statesClone.map(state => <option value={state.value}>{state.display}</option>)}
+                </select>
+                <input type="button" value="Login" onClick={this.onLogin.bind(this)}/>
+            </div>
+        );
+    }
+}
+
+export default Login6;
