@@ -7,6 +7,7 @@ import { StackNavigator } from 'react-navigation';
 import LoginScreen from './src/containers/login';
 import HomeScreen from './src/containers/home';
 import MoviesScreen from './src/containers/movies';
+import LocationScreen from './src/containers/location';
 
 var routes = {
   Login: {
@@ -17,6 +18,9 @@ var routes = {
   },
   Movies: {
     screen: MoviesScreen
+  },
+  Location: {
+    screen: LocationScreen
   }
 }
 
