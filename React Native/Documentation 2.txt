@@ -1,0 +1,15 @@
+react-native init training
+
+react-native run-android
+
+adb devices => to get list of devices/emulators
+
+adb reverse tcp:8081 tcp:8081
+
+Hot Reloading => Instant
+
+https://www.mapbox.com/help/first-steps-react-native-sdk/
+https://www.mapbox.com/account/
+
+
+https://www.youtube.com/watch?v=0_MnXPD55-E&t=71s
